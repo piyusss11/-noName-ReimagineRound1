@@ -10,8 +10,9 @@ const SplashPage = () => {
 
   useGSAP(() => {
     gsap.from(textanimate.current, {
-      scale: 0,
-      duration: 0.5,
+      opacity: 0,
+      duration: 3,
+      delay:0.5
     });
   });
   return (
