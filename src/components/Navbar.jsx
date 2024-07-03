@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 import { useRef } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const nav = useRef();
@@ -15,12 +16,14 @@ const Navbar = () => {
       ref={nav}
       className="flex justify-between items-center py-2  text-lg px-12 bg-black text-white"
     >
-      <img className="w-12" src="./images/nike.png" alt="nike logo" />
+      <NavLink to={"/"}>
+        <img className="w-12" src="./images/nike.png" alt="nike logo" />
+      </NavLink>
       <div className="flex gap-8 font-semibold">
         <h1>Home</h1>
-        <h1>Men</h1>
-        <h1>Women</h1>
-        <h1>Kids</h1>
+        <a href="#Men">Men</a >
+        <a href="#Women">Women</a >
+        <a href="#Kids">Kids</a >
       </div>
       <div className="flex gap-4">
         <div className="flex items-center gap-4 ">

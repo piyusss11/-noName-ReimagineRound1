@@ -19,12 +19,20 @@ const Footer = () => {
       <div className="col-span-6 flex flex-col justify-between">
         <div className="flex gap-8 self-end pr-12 text-2xl">
           <i className="ri-twitter-line hover:scale-110 hover:opacity-80 cursor-pointer"></i>
-          <Link target="_blank" to={"https://github.com/piyusss11"}>
-            <i className="ri-github-fill hover:scale-110 hover:opacity-80 cursor-pointer"></i>
+          <Link
+            className="hover:scale-110"
+            target="_blank"
+            to={"https://github.com/piyusss11"}
+          >
+            <i className="ri-github-fill hover:opacity-80 cursor-pointer"></i>
           </Link>
           <i className="ri-instagram-line hover:scale-110 hover:opacity-80 cursor-pointer"></i>
-          <Link target="_blank" to={"https://www.linkedin.com/in/piyusss11/"}>
-            <i className="ri-linkedin-fill hover:scale-110 hover:opacity-80 cursor-pointer"></i>
+          <Link
+            className="hover:scale-110"
+            target="_blank"
+            to={"https://www.linkedin.com/in/piyusss11/"}
+          >
+            <i className="ri-linkedin-fill  hover:opacity-80 cursor-pointer"></i>
           </Link>
           <i className="ri-youtube-fill hover:scale-110 hover:opacity-80 cursor-pointer"></i>
         </div>

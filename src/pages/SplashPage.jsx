@@ -1,18 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { NavLink,  useNavigate } from "react-router-dom";
 import InfiniteSecond from "../components/InfiniteSecond";
 import InfiniteXScroll from "../components/InfiniteXScroll";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const SplashPage = () => {
   const textanimate = useRef();
+  const navigate = useNavigate();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // console.log("hello");
+      navigate("/home");
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, [navigate]);
 
   useGSAP(() => {
     gsap.from(textanimate.current, {
       opacity: 0,
       duration: 3,
-      delay:0.5
+      delay: 0.5,
     });
   });
   return (
@@ -26,7 +34,7 @@ const SplashPage = () => {
             alt="logo"
           />
           <h1 ref={textanimate} className="text-2xl px-3">
-             Just do it
+            Just do it
           </h1>
         </div>
       </NavLink>

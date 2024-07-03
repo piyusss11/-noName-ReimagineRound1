@@ -17,7 +17,7 @@ const MainContainer = () => {
       <SecondMain />
       <ShopCarousel infoList={women} name={"Women"} />
       <ThirdMain />
-      <ShopCarousel infoList={kid} name={"Kid"} />
+      <ShopCarousel infoList={kid} name={"Kids"} />
       <FourthMain />
      
     </div>

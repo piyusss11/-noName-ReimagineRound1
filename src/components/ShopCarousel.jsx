@@ -31,8 +31,8 @@ const ShopCarousel = (props) => {
     { scope: div }
   );
   return (
-    <div ref={div} className="h-screen mt-10">
-      <h1 className="pl-6 text-3xl font-semibold py-2">{name}</h1>
+    <div id={name} ref={div} className="h-screen mt-10">
+      <h1  className="pl-6 text-3xl font-semibold py-2">{name}</h1>
       <Carousel className="w-full ">
         <CarouselContent className="-ml-1">
           {infoList.map((item) => (
